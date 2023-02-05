@@ -121,6 +121,7 @@ button:hover {
 @media screen and (max-width: 769px) {
   body {
     height: auto;
+    padding: 5rem 0;
   }
 
   .card {
