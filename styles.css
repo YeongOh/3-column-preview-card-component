@@ -1,0 +1,142 @@
+/* 
+
+### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700  */
+
+:root {
+  --color-primary-bright-orange: hsl(31, 77%, 52%);
+  --color-primary-dark-cyan: hsl(184, 100%, 22%);
+  --color-primary-very-dark-cyan: hsl(179, 100%, 13%);
+
+  --color-neutral-white-p: hsla(0, 0%, 100%, 0.75);
+  --color-neutral-light-grey-bg-h-btn: hsl(0, 0%, 95%);
+}
+
+html {
+  font-size: 93.75%;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  /* font-family: 'Big Shoulders Display', cursive; */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-neutral-light-grey-bg-h-btn);
+  color: var(--color-neutral-light-grey-bg-h-btn);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  width: 60rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+section {
+  padding: 2.5rem;
+}
+
+.card__sedan {
+  background-color: var(--color-primary-bright-orange);
+}
+
+.card__suvs {
+  background-color: var(--color-primary-dark-cyan);
+}
+
+.card__luxury {
+  background-color: var(--color-primary-very-dark-cyan);
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  font-size: 2.7rem;
+  margin: 2.5rem 0;
+}
+
+p {
+  color: var(--color-neutral-white-p);
+  line-height: 1.5;
+  margin-bottom: 7rem;
+}
+
+button {
+  padding: 1rem 1.8rem;
+  border-radius: 2rem;
+  border: 2px transparent solid;
+  cursor: pointer;
+}
+
+.card__btn-sedans {
+  color: var(--color-primary-bright-orange);
+}
+
+.card__btn-suvs {
+  color: var(--color-primary-dark-cyan);
+}
+
+.card__btn-luxury {
+  color: var(--color-primary-very-dark-cyan);
+}
+
+button:hover {
+  background-color: inherit;
+  color: var(--color-neutral-light-grey-bg-h-btn);
+  border: 2px var(--color-neutral-light-grey-bg-h-btn) solid;
+  transition: all 0.25s;
+}
+
+@media screen and (max-width: 769px) {
+  body {
+    height: auto;
+  }
+
+  .card {
+    flex-direction: column;
+    width: 22rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  section {
+    padding: 3rem;
+  }
+
+  h1 {
+    margin: 2rem 0;
+  }
+}
